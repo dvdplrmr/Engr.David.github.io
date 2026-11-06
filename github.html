@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Paul T. Romero | Civil Engineer, Master Plumber, Safety Officer II</title>
+<meta name="description" content="Registered Civil Engineer, Registered Master Plumber and Safety Officer II based in Cebu, Philippines.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏗️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#e9eef2; --card:#f8fafb; --ink:#14213d; --muted:#4b5a73; --line:#c3cdd8;
+  --orange:#e8590c; --orange-ink:#fff; --concrete:#8e9aa8; --grid:rgba(20,33,61,.07);
+}
+:root[data-theme="dark"]{
+  --paper:#0e1624; --card:#16213a; --ink:#eef2f7; --muted:#a3b0c4; --line:#2b3a58;
+  --orange:#ff7a2e; --orange-ink:#10182a; --concrete:#6b7a90; --grid:rgba(255,255,255,.05);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:400 1.05rem/1.65 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+section{padding:72px 0 8px}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:26px}
+h2::after{content:"";display:block;width:56px;height:6px;background:var(--orange);margin-top:12px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:6px;height:56px}
+nav .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;text-decoration:none;margin-right:auto}
+nav a.l{text-decoration:none;font-weight:500;font-size:.95rem;padding:6px 10px;border-radius:6px;color:var(--muted)}
+nav a.l:hover,nav a.l.on{color:var(--ink);background:var(--card)}
+.btn{font:600 .95rem Figtree,sans-serif;border:2px solid var(--ink);background:transparent;color:var(--ink);padding:9px 16px;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.main{background:var(--orange);border-color:var(--orange);color:var(--orange-ink)}
+.btn.main:hover{filter:brightness(1.08);background:var(--orange);color:var(--orange-ink)}
+#theme{width:38px;height:38px;padding:0;border-radius:50%;margin-left:6px}
+@media(max-width:720px){nav a.l{display:none}}
+
+/* hero */
+.hero{padding-top:56px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;letter-spacing:-.02em}
+.hero .role{font-size:1.2rem;font-weight:600;margin:18px 0 8px}
+.hero p{color:var(--muted);max-width:52ch;margin:0 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.photo{position:relative;justify-self:center;width:min(100%,300px)}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border:3px solid var(--ink);background:var(--line)}
+.photo::before{content:"";position:absolute;inset:14px -14px -14px 14px;background:var(--orange);z-index:-1}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.photo{order:-1;width:220px;justify-self:start}}
+
+/* site plan */
+.plan{background:var(--card);border:2px solid var(--ink);padding:24px}
+.plan-top{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;margin-bottom:18px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{font:600 .9rem Figtree,sans-serif;padding:7px 13px;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.count{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.3rem}
+.lots{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:12px}
+.lot{aspect-ratio:1;border:2px dashed var(--concrete);background:transparent;color:var(--ink);cursor:pointer;font:600 .8rem Figtree,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;transition:background .35s,border-color .35s,opacity .25s,transform .15s}
+.lot b{font:800 1.5rem 'Bricolage Grotesque',sans-serif}
+.lot:hover{transform:translateY(-2px)}
+.lot.poured{background:var(--concrete);border:2px solid var(--ink);color:#fff}
+.lot.dim{opacity:.18;pointer-events:none}
+.plan-note{min-height:3.2em;margin:16px 0 0;color:var(--muted);font-size:.98rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:22px}
+.stat{border-left:5px solid var(--orange);padding:4px 0 4px 14px}
+.stat b{display:block;font:800 2rem 'Bricolage Grotesque',sans-serif}
+.stat span{color:var(--muted);font-size:.92rem}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.about p{margin:0 0 14px}
+.quote{border-left:5px solid var(--orange);padding-left:16px;font-weight:500}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+
+/* experience */
+.job{background:var(--card);border:2px solid var(--ink);margin-bottom:14px}
+.job summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:space-between;align-items:baseline}
+.job summary::-webkit-details-marker{display:none}
+.job h3{font-size:1.3rem;font-weight:800;flex:1 1 300px}
+.job h3 small{display:block;font:600 .95rem Figtree,sans-serif;color:var(--orange);margin-top:4px}
+.job time{font-weight:600;color:var(--muted);font-size:.92rem}
+.job summary::after{content:"+";font:800 1.6rem 'Bricolage Grotesque',sans-serif;line-height:1;transition:transform .25s}
+.job[open] summary::after{transform:rotate(45deg)}
+.job .body{padding:0 22px 20px;color:var(--muted);max-width:72ch}
+.job .body p{margin:0}
+
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chip{padding:9px 16px;background:var(--card);border:2px solid var(--ink);font-weight:600;transition:background .2s,color .2s}
+.chip:hover{background:var(--orange);color:var(--orange-ink);border-color:var(--orange)}
+
+/* credentials */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.cred{background:var(--card);border:2px solid var(--ink);padding:20px}
+.cred h3{font-size:1.15rem;font-weight:800}
+.cred p{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+.cred.hi{border-color:var(--orange);box-shadow:6px 6px 0 var(--orange)}
+.edu{border-left:3px solid var(--line);margin:28px 0 0 6px}
+.edu div{position:relative;padding:0 0 22px 24px}
+.edu div::before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;background:var(--orange);border:3px solid var(--paper)}
+.edu b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem}
+.edu span{display:block;color:var(--muted);font-size:.95rem}
+
+/* contact */
+.contact{background:var(--ink);color:var(--paper);padding:34px;margin:0 0 20px}
+.contact h2{color:var(--paper)}
+.contact .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.contact .btn{border-color:var(--paper);color:var(--paper)}
+.contact .btn:hover{background:var(--paper);color:var(--ink)}
+.contact .btn.main{background:var(--orange);border-color:var(--orange);color:var(--orange-ink)}
+.contact p{margin:0 0 18px;max-width:50ch;opacity:.85}
+footer{padding:18px 0 40px;color:var(--muted);font-size:.9rem}
+#toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,90px);background:var(--ink);color:var(--paper);padding:10px 18px;font-weight:600;transition:transform .3s;z-index:30}
+#toast.show{transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">D. Romero</a>
+    <a class="l" href="#site">Site plan</a>
+    <a class="l" href="#about">About</a>
+    <a class="l" href="#experience">Experience</a>
+    <a class="l" href="#skills">Skills</a>
+    <a class="l" href="#credentials">Credentials</a>
+    <a class="l" href="#contact">Contact</a>
+    <button class="btn" id="theme" aria-label="Switch between light and dark mode" title="Light or dark">◐</button>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+
+  <header class="hero">
+    <div>
+      <h1>David Paul T. Romero</h1>
+      <div class="role">Registered Civil Engineer, Master Plumber and Safety Officer II</div>
+      <p>I run concrete construction sites in Northern Cebu. I track progress, coordinate crews and subcontractors, and look for digital tools that cut rework and repeat reporting.</p>
+      <div class="cta">
+        <a class="btn main" href="#site">Pour some concrete</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="photo"><img src="photo.jpg" alt="Portrait of David Paul T. Romero in a barong with a Cebu Technological University sash" width="640" height="800"></div>
+  </header>
+
+  <section id="site">
+    <h2>My site plan</h2>
+    <div class="plan">
+      <div class="plan-top">
+        <div class="tabs" role="group" aria-label="Filter by site">
+          <button class="tab" data-f="all" aria-pressed="true">All 11 houses</button>
+          <button class="tab" data-f="sr" aria-pressed="false">San Remigio (8)</button>
+          <button class="tab" data-f="db" aria-pressed="false">Daanbantayan (3)</button>
+        </div>
+        <div class="count"><span id="n">0</span> of 11 poured</div>
+      </div>
+      <div class="lots" id="lots"></div>
+      <p class="plan-note" id="note">Tap a lot to pour it. Filter by site to see how the work splits.</p>
+      <div class="stats">
+        <div class="stat"><b>11</b><span>coastal houses in my charge</span></div>
+        <div class="stat"><b>80</b><span>workers on average</span></div>
+        <div class="stat"><b>130</b><span>workers at peak</span></div>
+        <div class="stat"><b>2</b><span>sites in Northern Cebu</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about">
+      <div>
+        <p>I am a civil engineer with hands-on site experience in progress tracking, reporting and coordination. My major is Structural Engineering, and I graduated from Cebu Technological University in 2024 as a DOST scholar.</p>
+        <p>I also hold a Master Plumber license and a Safety Officer II certification, so I can handle the structure, the plumbing and the safety side of a job.</p>
+      </div>
+      <div>
+        <p class="quote">I prefer to keep proven site practices and add technology only where it saves time or prevents errors.</p>
+        <p>That is how I work: keep what already works on site, then use digital tools to remove rework and repetitive reporting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <details class="job" open>
+      <summary>
+        <h3>Radius One Architecture + Construction<small>Site Engineer / Person-in-Charge</small></h3>
+        <time>Feb 2026 to Oct 2026</time>
+      </summary>
+      <div class="body"><p>Site Engineer for 11 coastal houses in Northern Cebu, 8 in San Remigio and 3 in Daanbantayan. I supervise 80 workers on average, peaking at 130, and coordinate subcontractors, materials and plumbing works to keep concrete works on schedule and to approved plans and specifications. I prepare progress reports, plans and material requests, review billings, and resolve quality and safety issues on site.</p></div>
+    </details>
+
+    <details class="job">
+      <summary>
+        <h3>Department of Public Works and Highways (DPWH) 6th DEO<small>Assistant Field Engineer (On the Job Training)</small></h3>
+        <time>May 2023 to Aug 2023</time>
+      </summary>
+      <div class="body"><p>Assisted the site engineer with inspections, measurements and data collection. Helped with field and laboratory testing to confirm that works met project specifications. Supported project managers in tracking timelines and deliverables, and in carrying out approved plans and designs.</p></div>
+    </details>
+
+    <details class="job">
+      <summary>
+        <h3>Diaden Builders<small>Site Supervisor / Time Keeper</small></h3>
+        <time>Apr 2018 to Aug 2018</time>
+      </summary>
+      <div class="body"><p>Supervised daily site operations and coordinated workers and subcontractors. Checked progress, material and equipment availability, and work quality against plans and specifications.</p></div>
+    </details>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="tabs" role="group" aria-label="Skill type">
+      <button class="tab sk" data-s="core" aria-pressed="true">Core skills</button>
+      <button class="tab sk" data-s="soft" aria-pressed="false">Software</button>
+    </div>
+    <div class="chips" id="chips" aria-live="polite"></div>
+  </section>
+
+  <section id="credentials">
+    <h2>Credentials and education</h2>
+    <div class="grid2">
+      <div class="cred hi"><h3>Registered Civil Engineer (RCE)</h3><p>Professional Regulation Commission</p></div>
+      <div class="cred hi"><h3>Registered Master Plumber (RMP)</h3><p>Professional Regulation Commission</p></div>
+      <div class="cred"><h3>Certified Safety Officer II (COSH)</h3><p>Atsoca Learning Hub</p></div>
+      <div class="cred"><h3>DOST Scholar (Bachelor)</h3><p>Department of Science and Technology</p></div>
+      <div class="cred"><h3>Driver's License</h3><p>Land Transportation Office</p></div>
+    </div>
+    <div class="edu">
+      <div><b>BS Civil Engineering, 2024</b><span>Major in Structural Engineering, Cebu Technological University - Main Campus</span></div>
+      <div><b>STEM Strand, 2020</b><span>Senior High School, Cebu Technological University - Main Campus</span></div>
+      <div><b>Drafting Technology, 2018</b><span>Junior High School, Consolacion National High School</span></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's talk</h2>
+      <p>Open to conversations about site engineering, construction technology and new opportunities. Based in Consolacion, Cebu, Philippines.</p>
+      <div class="row">
+        <a class="btn main" href="mailto:davidpaulromero125@gmail.com">Send an email</a>
+        <button class="btn" id="copy">Copy email address</button>
+        <a class="btn" href="tel:+639671893236">Call +63 967 189 3236</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> David Paul T. Romero, RCE, RMP, SO2</div></footer>
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  $('#yr').textContent=new Date().getFullYear();
+
+  // theme
+  var root=document.documentElement, key='dr-theme';
+  var saved=null; try{saved=localStorage.getItem(key)}catch(e){}
+  if(!saved&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) saved='dark';
+  if(saved==='dark') root.setAttribute('data-theme','dark');
+  $('#theme').onclick=function(){
+    var d=root.getAttribute('data-theme')==='dark';
+    if(d) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
+    try{localStorage.setItem(key,d?'light':'dark')}catch(e){}
+  };
+
+  // toast
+  var tt; function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show')},2200)}
+
+  // site plan
+  var lots=[];
+  for(var i=1;i<=11;i++) lots.push({id:i,site:i<=8?'sr':'db',label:i<=8?'San Remigio':'Daanbantayan',no:i<=8?i:i-8});
+  var wrap=$('#lots'), n=$('#n'), note=$('#note'), poured={}, filter='all';
+  var msgs={
+    all:'Eleven houses across two coastal sites. Tap a lot to pour it.',
+    sr:'San Remigio: 8 houses on the coast of Northern Cebu.',
+    db:'Daanbantayan: 3 houses, managed alongside the San Remigio crews.'
+  };
+  function draw(){
+    wrap.innerHTML='';
+    lots.forEach(function(l){
+      var b=document.createElement('button');
+      b.className='lot'+(poured[l.id]?' poured':'')+(filter!=='all'&&filter!==l.site?' dim':'');
+      b.setAttribute('aria-pressed',poured[l.id]?'true':'false');
+      b.setAttribute('aria-label',l.label+' house '+l.no+(poured[l.id]?', poured':', not poured'));
+      b.innerHTML='<b>'+l.no+'</b>'+(l.site==='sr'?'San Remigio':'Daanbantayan');
+      b.onclick=function(){
+        poured[l.id]=!poured[l.id]; draw();
+        var c=Object.keys(poured).filter(function(k){return poured[k]}).length;
+        if(c===11) note.textContent='All 11 houses poured. On a real site that is a lot of mixer trips and a lot of coordination.';
+      };
+      wrap.appendChild(b);
+    });
+    var c=Object.keys(poured).filter(function(k){return poured[k]}).length;
+    n.textContent=c;
+    if(c<11) note.textContent=msgs[filter];
+  }
+  $$('.tab[data-f]').forEach(function(t){
+    t.onclick=function(){
+      filter=t.dataset.f;
+      $$('.tab[data-f]').forEach(function(x){x.setAttribute('aria-pressed',x===t?'true':'false')});
+      draw();
+    };
+  });
+  draw();
+
+  // skills
+  var data={
+    core:['Report writing and presenting','Quantity takeoff','Progress monitoring','Site safety management','Subcontractor coordination'],
+    soft:['AutoCAD','SketchUp','Microsoft Office','PlanSwift','Primavera P6','Photoshop','Canva','Lumion','STAAD.Pro','Revit']
+  };
+  function skills(k){
+    var c=$('#chips'); c.innerHTML='';
+    data[k].forEach(function(s){var d=document.createElement('span');d.className='chip';d.textContent=s;c.appendChild(d)});
+  }
+  $$('.sk').forEach(function(t){
+    t.onclick=function(){
+      $$('.sk').forEach(function(x){x.setAttribute('aria-pressed',x===t?'true':'false')});
+      skills(t.dataset.s);
+    };
+  });
+  skills('core');
+
+  // copy email
+  $('#copy').onclick=function(){
+    var e='davidpaulromero125@gmail.com';
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(e).then(function(){toast('Email address copied')},function(){toast(e)});
+    } else toast(e);
+  };
+
+  // active nav link
+  var links=$$('nav a.l');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(en.isIntersecting) links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id)});
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    $$('section[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
